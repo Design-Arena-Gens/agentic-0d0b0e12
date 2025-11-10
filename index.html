@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cloud Orchestration Research Briefing</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background: #f7f9fc;
+      color: #1a1a1a;
+      line-height: 1.6;
+    }
+    header {
+      background: #0b3d91;
+      color: #fff;
+      padding: 2rem 1.5rem;
+    }
+    header h1 {
+      margin: 0;
+      font-size: 2rem;
+    }
+    main {
+      max-width: 900px;
+      margin: -40px auto 3rem;
+      background: #fff;
+      border-radius: 12px;
+      box-shadow: 0 15px 40px rgba(12, 32, 68, 0.12);
+      padding: 2.5rem;
+    }
+    section + section {
+      margin-top: 1.75rem;
+    }
+    h2 {
+      margin-bottom: 0.75rem;
+      color: #0b3d91;
+      font-size: 1.4rem;
+    }
+    ul {
+      margin: 0.5rem 0 0.5rem 1.2rem;
+    }
+    footer {
+      text-align: center;
+      padding: 1rem;
+      color: #666;
+      font-size: 0.9rem;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Project Briefing: Standardised Cloud Orchestration for Cross-Cloud Workload Migration</h1>
+  </header>
+  <main>
+    <section>
+      <h2>Executive Summary</h2>
+      <p>This briefing proposes a six-month applied research and development engagement assessing the extent to which standardised cloud orchestration models reduce performance overhead and operational expenses during workload migration between major public cloud platforms. The project will design and validate a reference orchestration accelerator that automates migration playbooks across Amazon Web Services (AWS), Microsoft Azure, and Google Cloud Platform (GCP), combining policy-driven infrastructure-as-code templates with dynamic cost and performance telemetry. The initiative targets enterprise cloud centers of excellence (CCoEs), managed service providers (MSPs), and independent software vendors (ISVs) adopting multi-cloud strategies who require predictable migration outcomes and tighter cost governance.</p>
+    </section>
+    <section>
+      <h2>Problem Context and Opportunity</h2>
+      <p>Enterprises pursuing multi-cloud resilience face inconsistent abstractions in native orchestration tooling, leading to duplicated engineering effort, opaque runtime overheads, and migration slowdowns. Existing standards, including the Cloud Native Computing Foundation’s Crossplane and the OASIS Topology and Orchestration Specification for Cloud Applications (TOSCA), offer portable definitions but lack prescriptive guidance about runtime performance impacts during migration bursts. A validated orchestration accelerator that quantifies and mitigates overhead while aligning cloud-specific optimisations would accelerate modernisation roadmaps and reduce transition spend.</p>
+    </section>
+    <section>
+      <h2>Objectives</h2>
+      <ul>
+        <li>Benchmark migration overhead across AWS, Azure, and GCP using a baseline Kubernetes workload spanning stateless microservices, data processing jobs, and stateful stores.</li>
+        <li>Implement a standardised orchestration layer that composes Crossplane resource definitions with Open Policy Agent guardrails, targeting sub-5% migration-induced latency variance and a 12% reduction in operational cost.</li>
+        <li>Deliver decision-support dashboards for CCoE leads that visualise performance, cost, and compliance metrics across migration scenarios.</li>
+      </ul>
+    </section>
+    <section>
+      <h2>Stakeholder Benefits</h2>
+      <ul>
+        <li><strong>Enterprise CCoE Leaders:</strong> Repeatable playbooks that shorten migration planning cycles and surface cross-cloud trade-offs.</li>
+        <li><strong>MSP Delivery Teams:</strong> Reduced engineering time through reusable orchestration templates and automated policy enforcement.</li>
+        <li><strong>ISV Product Owners:</strong> Faster customer onboarding to preferred clouds via pre-tested migration pathways and cost predictability.</li>
+      </ul>
+    </section>
+    <section>
+      <h2>Supporting Literature</h2>
+      <ul>
+        <li>Paraiso, F., Challita, S., Hader, J., &amp; Merle, P. (2019). “Model-Driven Cloud Application Transfer.” <em>IEEE Transactions on Cloud Computing</em>.</li>
+        <li>Tofan, D., et al. (2021). “Assessing Cross-Cloud Kubernetes Migration.” <em>Future Generation Computer Systems</em>.</li>
+        <li>CNCF. (2023). “Crossplane Production User Survey.” Cloud Native Computing Foundation.</li>
+        <li>RightScale Flexera. (2022). “State of the Cloud Report.” Flexera Software LLC.</li>
+      </ul>
+    </section>
+    <section>
+      <h2>Resource Requirements</h2>
+      <ul>
+        <li>Core team of five: cloud architect, DevOps engineer, FinOps analyst, data engineer, UX researcher.</li>
+        <li>Budget: USD 450,000 covering personnel, three public cloud sandbox subscriptions, observability tooling (Datadog, Prometheus/Grafana), and license for cost analytics platform (CloudHealth).</li>
+        <li>Infrastructure: Managed Kubernetes clusters in each target cloud (EKS, AKS, GKE) with representative workload footprints and synthetic telemetry generators.</li>
+      </ul>
+    </section>
+    <section>
+      <h2>Development Plan and Milestones</h2>
+      <ul>
+        <li><strong>Phase 1 – Discovery (Weeks 1-4):</strong> Capture migration pain points through stakeholder interviews, establish baseline metrics, and define evaluation criteria.</li>
+        <li><strong>Phase 2 – Prototype Orchestration Layer (Weeks 5-10):</strong> Build Crossplane composite resources, integrate policy automation, and assemble workload test harness.</li>
+        <li><strong>Phase 3 – Benchmarking (Weeks 11-18):</strong> Execute controlled migrations across clouds, collect telemetry, and iterate optimisations to meet latency and cost targets.</li>
+        <li><strong>Phase 4 – Decision Support Toolkit (Weeks 19-22):</strong> Develop dashboards and narrative reporting templates for executive consumption.</li>
+        <li><strong>Phase 5 – Validation and Handover (Weeks 23-26):</strong> Conduct stakeholder training, document playbooks, and publish comparative findings.</li>
+      </ul>
+    </section>
+    <section>
+      <h2>Risk Considerations and Mitigations</h2>
+      <p>Key risks include variance in cloud-native service capabilities, limited access to proprietary telemetry, and compliance constraints around data sovereignty. Mitigation strategies encompass early legal review of data handling, use of synthetic datasets, modular abstraction layers to swap cloud-specific components, and a governance forum to adjudicate change requests rapidly. Success will be measured by migration time reduction, verified cost savings, and an increase in stakeholder confidence scores tracked through pre/post engagement surveys.</p>
+    </section>
+  </main>
+  <footer>
+    &copy; 2024 Cloud Orchestration Research Briefing
+  </footer>
+</body>
+</html>
